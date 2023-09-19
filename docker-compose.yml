@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  pix_venda:
+    container_name: pix_venda
+    
+    build:
+        context: ./
+    command: npm start
+
+    volumes: 
+        - ./:/usr/src/app
+    expose:
+        - 8000
+    ports:
+        - 8000:3000
